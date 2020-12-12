@@ -1,0 +1,40 @@
+
+//globalheader
+
+
+.globalHeader {
+	background: $color-globalHeader-bg;
+	color: $color-globalHeader-text;
+    position: fixed; /* 要素の位置を固定する */
+    top: 0; /* 基準の位置を画面の一番下に指定する */
+    left:0;
+    right:0;
+    width: 100%;
+    z-index: 100;
+    height: $globalHeader-height;
+    .globalHeader-row {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: .8rem;
+        a {
+            color: white;
+            display: inline-block;
+            padding: 1rem .5rem;
+            text-decoration: none;
+        }
+    }
+    .navbar-ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            list-style: none;
+        }
+    }
+}
+
+.globalHeader-blank {
+    height: $globalHeader-height;
+}
