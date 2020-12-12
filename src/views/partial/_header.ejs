@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <meta charset="utf-8">
   <title><%= data.pageTitle %> - <%= data.siteName %></title>
-  
+
   <link rel="stylesheet" href="css/style.css" />
   <script>
     let vh = window.innerHeight * 0.01;
@@ -14,24 +15,25 @@
 
 <body id=<%= data.pageBodyId %>>
 
-  <nav class="globalHeader">
-    <div class="common-container">
-      <div class="globalHeader-row">
-        <div class="globalHeader-left">
-          <a class="navbar-brand" href="index.html">Sample</a>
-        </div>
-        <div class="globalHeader-right">
-          <ul class="navbar-ul">
-            <li>
-              <a href="about.html">
-                About
-              </a>
-            </li>
-          </ul>
+  <header class="globalHeader">
+    <nav>
+      <div class="common-container">
+        <div class="globalHeader-row">
+          <div class="globalHeader-left">
+            <a class="navbar-brand" href="index.html">Sample</a>
+          </div>
+          <div class="globalHeader-right">
+            <ul class="navbar-ul">
+              <li>
+                <a href="about.html">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   <div class="globalHeader-blank"></div>
   <div id="main">
-  
