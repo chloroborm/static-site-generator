@@ -69,6 +69,8 @@ function stylesFunc() {
     .pipe(plumber({
       errorHandler: notify.onError('Error: <%= error.message %>')
     }))
+    .pipe(sass()) // Sassのコンパイルを実行
+    .pipe(rename({extname:'.css'}))  
     .pipe(postcss([ autoprefixer({
       grid: 'autoplace', //gridレイアウトのプレフィックスを有効にする
     }) ]))

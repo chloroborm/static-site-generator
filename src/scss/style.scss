@@ -1,1 +1,6 @@
-@import "./globals/_common.scss";
+@import "globals/_variable";
+@import "globals/_common";
+
+@import "components/_*.scss";
+
+@import "pages/*.scss";
