@@ -1,9 +1,87 @@
 // index page
-.page-index{
-	p {
-		line-height: 1.5;
-	}
+#page-index{
+    .hero {
+        margin: 0px;
+        background: $color-hero-bg;
+        text-align: center;
+        color: $color-hero-text;
+        overflow:hidden;
+        height: 100vh;
+        height: calc(calc( var(--vh, 1vh) * 100) - #{$globalHeader-height});
+        .common-container {
+            height: 100%;
+        }   
+    }
+
+    section {  // セクションデフォルト設定
+        background-color: $color-section-bg;
+        margin: 0px;
+        text-align: center;
+        justify-content: center;
+        overflow:hidden;
+        .l-row {
+            justify-content: center;
+        }
+        ul, ol, dl {
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .section-pickup {
+        margin: 0px;
+        background: $palette-midnightBlue;
+        color: $palette-white;
+        overflow:hidden;
+    }
 } 
 
 
+.arrow_box{
+    margin: auto;
+    position:relative;
+    max-width:310px;
+    // height:100px;
+    background:#FFFFFF;
+    padding:10px;
+    text-align:center;
+    border:5px solid #3F729B;
+    border-radius:24px;
+	-webkit-border-radius:24px;
+    -moz-border-radius:24px;
+}
+.arrow_box:after,.arrow_box:before{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    top:100%;
+    left:49%;
+}
+.arrow_box:after{
+    border-color: rgba(255, 255, 255, 0);
+    border-top-width:16px;
+    border-bottom-width:16px;
+    border-left-width:20px;
+    border-right-width:20px;
+    margin-left: -20px;
+    border-top-color:#FFFFFF;
+}
+.arrow_box:before{
+    border-color: rgba(63, 114, 155, 0);
+    border-top-width:20px;
+    border-bottom-width:20px;
+    border-left-width:24px;
+    border-right-width:24px;
+    margin-left: -24px;
+    margin-top: 4px;
+    border-top-color:#3F729B;
+}
 

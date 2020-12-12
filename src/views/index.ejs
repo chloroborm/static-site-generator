@@ -14,8 +14,31 @@ const data = Object.assign(globalData, localData);
 <%- include("partial/_header", {data:data}); %>
 
 
-<h1>みだし</h1>
-<p>本文</p>
+<header class="hero">
+	<div class="common-container">
+		<p>サンプルサイトです</p>
+		<h1><div class='arrow_box'>Sample!</div></h1>
+		<img src="assets/index_top_hero.png">
+	</div>
+</header>
+
+<section class="section-pickup">
+	<div class=common-container>
+		<header class="section-header">
+			<h2>Pick UP</h2>
+		</header>
+		<div class="l-row">
+			<div class="l-span6">
+				<img src="assets/common_dummy_640x480.png">
+				<div>Dummy</div>
+			</div>
+			<div class="l-span6">
+				<img src="assets/common_dummy_640x480.png">
+				<div>Dummy</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
 <%- include("partial/_footer", {data:data}); %>
