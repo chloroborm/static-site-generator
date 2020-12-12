@@ -36,7 +36,12 @@ figure {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
     background-color: #ffffff;
 }
-
+.hero:not(.page-index) {
+    background-color: #555555;
+    color: #fafafa;
+    margin: 0px;
+    overflow: hidden;
+}
 
 .common-container {
     width: auto;
