@@ -1,6 +1,21 @@
-<%- include("_partial/_header"); %>
+<%# サイト全体の変数 %>
+<% include("data/_data"); const globalData = getData(); %>
+<%# ページ固有の変数 %>
+<%
+const localData = {
+	pageTitle: "Index",
+	pageBodyId: "page-index"
+};
+
+const data = Object.assign(globalData, localData);
+%>
+<% console.log(data); %>
+
+<%- include("partial/_header", {data:data}); %>
+
 
 <h1>みだし</h1>
 <p>本文</p>
 
-<%- include("_partial/_footer"); %>
+
+<%- include("partial/_footer", {data:data}); %>
