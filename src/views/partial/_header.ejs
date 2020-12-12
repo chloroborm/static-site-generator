@@ -6,12 +6,16 @@
   <title><%= data.pageTitle %> - <%= data.siteName %></title>
   
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  </script>
 </head>
 
 <body id=<%= data.pageBodyId %>>
 
   <nav class="globalHeader">
-    <div class="l-container">
+    <div class="common-container">
       <div class="globalHeader-row">
         <div class="globalHeader-left">
           <a class="navbar-brand" href="index.html">Sample</a>
@@ -29,4 +33,5 @@
     </div>
   </nav>
   <div class="globalHeader-blank"></div>
+  <div id="main">
   
