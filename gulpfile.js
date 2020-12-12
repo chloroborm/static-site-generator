@@ -58,7 +58,7 @@ const srcpathAll = [paths.html.src, paths.html.tempSrc, paths.styles.src, paths.
 //画質コントロール
 const imageQuality = {
   jpg: 60,
-  png: [0.3, 0.5], //minimum, maximum
+  png: 7, //1-7 圧縮レベル
   svg: 60,
   gif: 1, //1 or 3, 1 is default
 }
