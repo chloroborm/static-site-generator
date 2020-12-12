@@ -29,7 +29,7 @@ const pathOrigin = {
 }
 const paths = {
   html: {
-    src: pathOrigin.dev + '/views/*.ejs',
+    src: pathOrigin.dev + '/views/pages/**/*.ejs',
     tempSrc: pathOrigin.dev + '/views/**/_*.ejs',
     dest:  pathOrigin.dest,
     map: '/map',
@@ -42,13 +42,13 @@ const paths = {
     clearmap: pathOrigin.dest + '/css/map',
   },
   scripts: {
-    src: pathOrigin.dev + '/js/*.js',
+    src: pathOrigin.dev + '/js/**/*.js',
     dest: pathOrigin.dest + '/js',
     map: '/map',
     clearmap: pathOrigin.dest + '/js/map/',
   },
   images: {
-    src: pathOrigin.dev + '/assets/*.{jpg,jpeg,png,svg,gif}',
+    src: pathOrigin.dev + '/assets/**/*.{jpg,jpeg,png,svg,gif}',
     dest: pathOrigin.dest + '/assets',
   }
 }
