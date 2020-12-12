@@ -1,19 +1,68 @@
 // Color Variables
+// 白系
+$palette-white: #fff;
+$palette-snowWhite: #fafdff;
+$palette-pinkWhite: #fef9fb;
+$palette-pearlWhite: #f7f6f5;
+$palette-oysterWhite: #eae8e1;
+$palette-silver: #c9caca;
+$palette-silverGray: #afafb0;
 
-$bg: #ededed; ; // Background color
-$bg-light: #EDF2F2; // Light background color
+// 黒系
+$palette-battleshipGray: #898989;
+$palette-steelGray: #736d71;
+$palette-graphite: #594e52;
+$palette-taupe: #504946;
+$palette-charcoalGray: #4e454a;
+$palette-lampBlack: #24140e;
+$palette-black: #000;
 
-$text: #444; // Base text color
-$text-header: #333; // Header text color
-$text-light: #717584; // Light text color
+// 赤系
+$palette-cherryRed: #D41655;
+$palette-signalRed: #e8383d;
+$palette-vermilion: #ea553a;
+$palette-red: #ea5550;
+$palette-scarlet: #ea5532;
+$palette-marigold: #f39800;
+$palette-orange: #ffa500;
+$palette-saffronYellow: #fac559;
+$palette-rosePink: #f19ca7;
+$palette-flesh: #fad09e;
 
-$link: #6162B7; // Link text color
-$hover: darken($link,8%); // Link text color(hover)
+// 緑系
+$palette-bottleGreen: #004d25;
+$palette-billiardGreen: #005c42;
+$palette-oliveGreen: #5f6527;
+$palette-viridian: #00885a;
+$palette-green: #00a960;
+$palette-leafGreen: #9fc24d;
+$palette-appleGreen: #a7d28d;
+$palette-skyGreen: #bee0c2;
 
-$border: #c8cfe4; // Border color
+// 青系
+$palette-midnightBlue: #191970;
+$palette-navyBlue: #202f55;
+$palette-ultramarine: #434da2;
+$palette-violet: #5a4498;
+$palette-marineBlue: #006888;
+$palette-blue: #0075c2;
+$palette-hyacinth: #6c9bd2;
+$palette-lightBlue: #b2cde4;
+$palette-skyBlue: #a0d8ef;
+$palette-powderBlue: #b0e0e6;
 
+// -----------------------------------
 
-$font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+//コンポーネントのカラー定義
+$color-main-text: $palette-lampBlack;
+$color-main-bg: $palette-snowWhite;
+$color-globalHeader-text: $palette-snowWhite;
+$color-globalHeader-bg: $palette-lampBlack;
+$color-globalFooter-text: $palette-snowWhite;
+$color-globalFooter-bg: $palette-lampBlack;
+
+// font-family
+$font: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 
 
 $globalHeader-height: 50px;
