@@ -1,6 +1,7 @@
 const gulp = require('gulp'); //gulp
 const rename = require('gulp-rename'); //名前変更
 const sass = require('gulp-sass'); //sassコンパイル
+const sassGlob = require("gulp-sass-glob");
 const packageImporter = require('node-sass-package-importer'); //cssパッケージのimport用
 const postcss = require('gulp-postcss'); //autoprefixerを使うのに必要
 const autoprefixer = require('autoprefixer'); //prefixをつける
@@ -69,6 +70,7 @@ function stylesFunc() {
     .pipe(plumber({
       errorHandler: notify.onError('Error: <%= error.message %>')
     }))
+    .pipe(sassGlob()) // Sassの@importにおけるglobを有効にする
     .pipe(sass()) // Sassのコンパイルを実行
     .pipe(rename({extname:'.css'}))  
     .pipe(postcss([ autoprefixer({
