@@ -1,5 +1,5 @@
 // tree_menu
-$tree_menu-padding: 1.5em; // 行の高さを基準に余白と位置を揃える
+$tree_menu-padding: 0.8em; // 行の高さを基準に余白と位置を揃える
 $tree_menu-border-width: 1px;
 $tree_menu-border-color: currentColor; // colorと同じ色を指定している
  
@@ -40,7 +40,8 @@ $tree_menu-border-color: currentColor; // colorと同じ色を指定している
     content: "";
     display: block;
     position: absolute;
-    top: $tree_menu-padding;
+    // top: $tree_menu-padding;
+    top: 1.4em;
     left: 0;
     width: ($tree_menu-padding / 2);
     height: 0;
