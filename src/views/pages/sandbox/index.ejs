@@ -1,17 +1,19 @@
-<%# サイト全体の変数 %>
-<% include("../data/_data"); const globalData = getData(); %>
 <%# ページ固有の変数 %>
 <%
 const localData = {
 	pageTitle: "SandBox",
-	pageBodyId: "page-sandbox"
+	pageBodyId: "page-sandbox",
+	toRoot: "./../"
 };
-
+%>
+<%# サイト全体の変数 %>
+<% include(localData.toRoot + "../data/_data"); const globalData = getData(); %>
+<%
 const data = Object.assign(globalData, localData);
 %>
 <% console.log(data); %>
 
-<%- include("../partial/_header", {data:data}); %>
+<%- include(data.toRoot + "../partial/_header", {data:data}); %>
 
 
 <header class="hero">
@@ -60,7 +62,7 @@ const data = Object.assign(globalData, localData);
 				<header class="section-header">
 					<h3>パラグラフ(p)</h3>
 				</header>
-				<img style="width:250px;height:125px;float:right" src="images/css_gods_language.png"
+				<img style="width:250px;height:125px;float:right" src="<%= data.toRoot %>images/css_gods_language.png"
 					alt="CSS | God's Language" />
 				<p>洋酒といえば、誰でも最初に思い浮かべるのがウイスキー。<a href="#" title="テストリンク">テストリンク(a)</a>いわば洋酒のシンボル的な存在なのだが、英語表記が［一般に〔米〕では
 					Whiskey,〔英〕では Whisky.］であることはあまり知られていない。米英両国では、このスペルの差で自国産と輸入品を区別しているという。わが和製ウイスキーの
@@ -269,14 +271,14 @@ const data = Object.assign(globalData, localData);
 		<div class="l-row">
 			<div class="l-span6">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 
 			</div>
 			<div class="l-span6">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
@@ -284,19 +286,19 @@ const data = Object.assign(globalData, localData);
 		<div class="l-row">
 			<div class="l-span4">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
 			<div class="l-span4">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
 			<div class="l-span4">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
@@ -304,25 +306,25 @@ const data = Object.assign(globalData, localData);
 		<div class="l-row">
 			<div class="l-span3">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
 			<div class="l-span3">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
 			<div class="l-span3">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
 			<div class="l-span3">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
@@ -372,4 +374,4 @@ $ npm start</pre>
 	</div>
 </section>
 
-<%- include("../partial/_footer", {data:data}); %>
+<%- include(data.toRoot + "../partial/_footer", {data:data}); %>

@@ -1,24 +1,26 @@
-<%# サイト全体の変数 %>
-<% include("../data/_data"); const globalData = getData(); %>
 <%# ページ固有の変数 %>
 <%
 const localData = {
 	pageTitle: "Index",
-	pageBodyId: "page-index"
+	pageBodyId: "page-index",
+	toRoot: "./"
 };
-
+%>
+<%# サイト全体の変数 %>
+<% include(localData.toRoot + "../data/_data"); const globalData = getData(); %>
+<%
 const data = Object.assign(globalData, localData);
 %>
 <% console.log(data); %>
 
-<%- include("../partial/_header", {data:data}); %>
+<%- include(data.toRoot + "../partial/_header", {data:data}); %>
 
 
 <header class="hero">
 	<div class="common-container">
 		<p>サンプルサイトです</p>
 		<h1><div class='arrow_box'>Sample!</div></h1>
-		<img src="assets/index_top_hero.png">
+		<img src="<%= data.toRoot %>assets/index_top_hero.png">
 	</div>
 </header>
 
@@ -30,13 +32,13 @@ const data = Object.assign(globalData, localData);
 		<div class="l-row">
 			<div class="l-span6">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
 			<div class="l-span6">
 				<figure>
-					<img src="assets/common_dummy_640x480.png">
+					<img src="<%= data.toRoot %>assets/common_dummy_640x480.png">
 					<figcaption>Dummy</figcaption>
 				</figure>
 			</div>
@@ -45,4 +47,4 @@ const data = Object.assign(globalData, localData);
 </section>
 
 
-<%- include("../partial/_footer", {data:data}); %>
+<%- include(data.toRoot + "../partial/_footer", {data:data}); %>

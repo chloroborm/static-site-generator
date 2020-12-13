@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title><%= data.pageTitle %> - <%= data.siteName %></title>
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="<%= data.toRoot %>css/style.css" />
   <script>
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -21,17 +21,17 @@
       <div class="common-container">
         <div class="globalHeader-row">
           <div class="globalHeader-left">
-            <a class="navbar-brand" href="index.html">Sample</a>
+            <a class="navbar-brand" href="<%= data.toRoot %>">Sample</a>
           </div>
           <div class="globalHeader-right">
             <ul class="navbar-ul">
               <li>
-                <a href="about.html">
+                <a href="<%= data.toRoot %>about/">
                   About
                 </a>
               </li>
               <li>
-                <a href="sandbox.html">
+                <a href="<%= data.toRoot %>sandbox/">
                   SandBox
                 </a>
               </li>
