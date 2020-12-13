@@ -91,6 +91,38 @@ h5,h6 {
     }
 }
 
+blockquote {
+    position: relative;
+    padding: 30px 10px 8px 10px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: $palette-pearlWhite;
+
+    :before{
+        display: inline-block;
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        content: "“";
+        font-family: sans-serif;
+        color: #cfcfcf;
+        font-size: 90px;
+        line-height: 1;
+    }
+    p {
+        padding: 0;
+        margin: 10px 0;
+        line-height: 1.7;
+    }
+    cite {
+        display: block;
+        text-align: right;
+        color: $palette-steelGray;
+        font-size: 0.9em;
+    }
+}
+
+
 #main{
     margin: 0 auto;
     max-width: 1140px;
