@@ -1,0 +1,327 @@
+<%# サイト全体の変数 %>
+<% include("../data/_data"); const globalData = getData(); %>
+<%# ページ固有の変数 %>
+<%
+const localData = {
+	pageTitle: "SandBox",
+	pageBodyId: "page-sandbox"
+};
+
+const data = Object.assign(globalData, localData);
+%>
+<% console.log(data); %>
+
+<%- include("../partial/_header", {data:data}); %>
+
+
+<header class="hero">
+	<div class="common-container">
+		<h1>Sand Box</h1>
+	</div>
+</header>
+
+<section class="section-basic_elements">
+	<div class=common-container>
+		<header class="section-header">
+			<h2>CSS の基本的な要素</h2>
+		</header>
+
+		<p>この HTML の目的は何のデフォルト設定が CSS を持っているか決定するのを手伝うこと、そして、場所を設計するとき、どんな可能な要素でもミスしないようにすべての可能な HTML 要素がこの HTML
+			に含められることを確認することです。</p>
+
+		<dl>
+			<dt>Original:</dt>
+			<dd><a href="http://www.sitefromscratch.com/content/html-xhtml-css-testing">HTML XHTML for CSS Testing</a>
+			</dd>
+			<dt>Japanese Edition:</dt>
+			<dd><a
+					href="//coliss.com/articles/build-websites/operation/css/1457.html">HTMLの各要素が配置されたスタイルシートのチェック用のテンプレート</a>
+			</dd>
+		</dl>
+
+
+		<div class=common-container>
+			<header class="section-header">
+				<h3>見出し(hn)</h3>
+			</header>
+			<h1>見出し 1</h1>
+			<h2>見出し 2</h2>
+			<h3>見出し 3</h3>
+			<h4>見出し 4</h4>
+			<h5>見出し 5</h5>
+			<h6>見出し 6</h6>
+
+		</div>
+
+		<div class=common-container>
+			<header class="section-header">
+				<h3>パラグラフ(p)</h3>
+			</header>
+			<img style="width:250px;height:125px;float:right" src="images/css_gods_language.png"
+				alt="CSS | God's Language" />
+			<p>洋酒といえば、誰でも最初に思い浮かべるのがウイスキー。<a href="#" title="テストリンク">テストリンク(a)</a>いわば洋酒のシンボル的な存在なのだが、英語表記が［一般に〔米〕では
+				Whiskey,〔英〕では Whisky.］であることはあまり知られていない。米英両国では、このスペルの差で自国産と輸入品を区別しているという。わが和製ウイスキーの
+				“Whisky”という英国式表示は、手本にしたスコッチのフォルムに倣ったものであり、それ以上の意味はないようだ。カナ表記にしても、ごくまれに〈ウヰスキー〉という書き方を見かけるが、これとて差別化を意図したものではなく単にカナづかいの時代性にすぎない。
+			</p>
+
+			<p>現在、カナ表記は〈<em>ウイスキー(em)</em>〉に一本化しており、そこに国産・舶来の区別はない。最近は価格面での差もちぢまり、20年前に ￥10,000
+				だった本場のスコッチが半値近くになるなど、ウイスキーは一層ポピュラーなものになってきた。しかし、消費量についていえば、洋酒のトップは何といってもビールだろう。よっぽどの下戸はともかく、まず誰でもタシナミ程度には口にする。
+			</p>
+
+		</div>
+
+		<div class=common-container>
+			<header class="section-header">
+				<h3 id="list_types">リスト要素</h3>
+			</header>
+			<h4>定義型リスト(dl)</h4>
+			<dl>
+				<dt>定義型リスト　用語</dt>
+				<dd>定義型リスト　定義</dd>
+			</dl>
+
+			<h4>順序付きリスト(ol)</h4>
+			<ol>
+				<li>リストアイテム 1</li>
+				<li>リストアイテム 2</li>
+				<li>リストアイテム 3</li>
+			</ol>
+
+			<h4>並列列挙リスト(ul)</h4>
+			<ul>
+				<li>リストアイテム 1</li>
+				<li>リストアイテム 2</li>
+				<li>リストアイテム 3</li>
+			</ul>
+
+		</div>
+
+		<div class=common-container>
+			<header class="section-header">
+				<h3 id="form_elements">フォーム要素</h3>
+			</header>
+			<fieldset>
+				<legend>Legend</legend>
+
+				<p>もっとも、オッペケペッポーの攻勢に、ぐぅのネを上げた紳士や淑女がいたかどうか…西洋カブレとは、要するに欧米文化への信奉者のこと。〈鰯ノ頭ヲ信心〉する者があるならヨーロッパやアメリカの文物を信仰する者がいても一向に不思議はない。信ずる者の強さで、依然グラス片手に舞踏会、アン・ドゥ・トロヮとやっていたように思われる。
+				</p>
+
+				<form>
+					<h2>Form Element</h2>
+
+					<p>憶測になるが、むしろ辛かったのは庶民の中の飲んべぇ連中ではなかったか。ハイカラ族にユサぶりをかけた手前、泰西の酒には手を出しづらい。「なに、ビールだとぉ、べらぼーめ、こちとら人間サマでぃ、カニじゃあるめぇしアブクなんか飲めるかってんだ」などと強がりながらも、サゾ飲みたかったろうという気がする。
+					</p>
+
+					<p><label for="text_field">テキストフィールド(text)：</label><br />
+						<input type="text" id="text_field" /></p>
+
+					<p><label for="text_area">テキストエリア(textarea)：</label><br />
+						<textarea id="text_area"></textarea></p>
+
+					<p><label for="select_element">セレクト(select)：</label><br />
+						<select name="select_element">
+							<optgroup label="Option Group 1">
+								<option value="1">オプション 1</option>
+								<option value="2">オプション 2</option>
+								<option value="3">オプション 3</option>
+							</optgroup>
+							<optgroup label="Option Group 2">
+								<option value="1">オプション 1</option>
+								<option value="2">オプション 2</option>
+								<option value="3">オプション 3</option>
+							</optgroup>
+						</select></p>
+
+					<p><label for="radio_buttons">ラジオボタン(radio)：</label><br />
+						<input type="radio" class="radio" name="radio_button" value="radio_1" /> ラジオボタン 1<br />
+						<input type="radio" class="radio" name="radio_button" value="radio_2" /> ラジオボタン 2<br />
+						<input type="radio" class="radio" name="radio_button" value="radio_3" /> ラジオボタン 3<br />
+					</p>
+
+					<p><label for="checkboxes">チェックボックス(checkbox)：</label><br />
+						<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> チェックボックス 1<br />
+						<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> チェックボックス 2<br />
+						<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> チェックボックス 3<br />
+					</p>
+
+					<p><label for="password">パスワード(password)：</label><br />
+						<input type="password" class="password" name="password" />
+					</p>
+
+					<p><label for="file">ファイル(file)：</label><br />
+						<input type="file" class="file" name="file" />
+					</p>
+
+
+					<p><input class="button" type="reset" value="リセット(reset)" /> <input class="button" type="submit"
+							value="サブミット(submit)" />
+					</p>
+
+
+
+				</form>
+
+			</fieldset>
+
+
+		</div>
+
+		<div class=common-container>
+			<header class="section-header">
+				<h3>テーブル</h3>
+			</header>
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<th>テーブルヘッダ(th) 1</th>
+					<th>テーブルヘッダ 2</th>
+					<th>テーブルヘッダ 3</th>
+				</tr>
+				<tr>
+					<td>セル(td) 1</td>
+					<td>セル 2</td>
+					<td>セル 3</td>
+				</tr>
+				<tr class="even">
+					<td>セル 1</td>
+					<td>セル 2</td>
+					<td>セル 3</td>
+				</tr>
+				<tr>
+					<td>セル 1</td>
+					<td>セル 2</td>
+					<td>セル 3</td>
+				</tr>
+
+			</table>
+
+		</div>
+
+		<div class=common-container>
+			<header class="section-header">
+				<h3 id="misc">その他</h3>
+			</header>
+			<p>しかし明治32年７月４日、恵比寿ビールのＰＲを目的にしたビアホールが新橋に登場。<sup>上付文字(sup)</sup> dolor <sub>下付文字(sub)</sub>ジャムパン１ヶ２銭の時代に 0.25
+				リットル５銭でビールの１ぱい売りを始めたことから様相は一転する。レンガづくりのモダンな店ながら、はっぴ姿の車夫も金バッヂの紳士もゼニを払えば平等の客。<cite>引用元：cite</cite>誰はゞかることなくビールをグィとやって舌ツヾミを打てる。当初から評判になって人々がワッと集まり、ファンの数もふえた。<acronym
+					title="National Basketball Association">省略語(acronym)：NBA</acronym>２ヵ月後の９月には中央新聞がその盛況ぶりを図入りで伝えたほどだった。<abbr
+					title="Avenue">省略語(abbr)：AVE</abbr></p>
+
+
+			<blockquote>
+				ゆ上がりの男２人と「絣の筒袖をつんつるてんに着てゐる」下女のやりとりは、いささかマンザイのボケとツッコミのセリフを思わせるが、ビールもこの時期には日本のスミズミまでじゅうぶんに出回っていたのがわかる。<br />-引用(blockquote)
+			</blockquote>
+
+		</div>
+
+	</div>
+</section>
+
+<section class="section-grid">
+	<div class=common-container>
+		<header class="section-header">
+			<h2>Grid</h2>
+		</header>
+		<div class="l-row">
+			<div class="l-span6">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+
+			</div>
+			<div class="l-span6">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="l-row">
+			<div class="l-span4">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+			<div class="l-span4">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+			<div class="l-span4">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="l-row">
+			<div class="l-span3">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+			<div class="l-span3">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+			<div class="l-span3">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+			<div class="l-span3">
+				<figure>
+					<img src="assets/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-terminal">
+	<div class=common-container>
+		<header class="section-header">
+			<h2>Terminal</h2>
+		</header>
+		<div class="terminal">
+			<pre>
+$ cd xxx
+$ npm install
+$ npm start</pre>
+		</div>
+	</div>
+</section>
+
+<section class="section-tree_menu">
+	<div class=common-container>
+		<header class="section-header">
+			<h2>TreeMenu</h2>
+		</header>
+		<ul class="tree_menu">
+			<li>fafaf
+				<ul>
+					<li>aaa
+						<ul>
+							<li>aaa</li>
+							<li>aaa</li>
+							<li>aaa</li>
+						</ul>
+					</li>
+					<li>aaa<ul>
+							<li>aaa</li>
+						</ul>
+					</li>
+					<li>aaa</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<%- include("../partial/_footer", {data:data}); %>
