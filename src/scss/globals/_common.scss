@@ -40,7 +40,7 @@ table{
     margin:0 auto;
   th {
     font-weight: 400;
-    border-bottom:2px solid #000;
+    border-bottom:1px solid $palette-lampBlack;
   }
   td,th{
     padding:10px;
@@ -127,11 +127,11 @@ blockquote {
     margin: 0 auto;
     max-width: 1140px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
-    background-color: #ffffff;
+    background-color: $color-main-bg;
 }
 .hero:not(.page-index) {
-    background-color: #555555;
-    color: #fafafa;
+    background-color: $color-hero-bg;
+    color: $color-hero-text;
     margin: 0px;
     overflow: hidden;
 }
