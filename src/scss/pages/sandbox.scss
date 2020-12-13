@@ -1,0 +1,15 @@
+#page-sandbox {
+	.section-section_background_color{
+		background-color: $palette-charcoalGray;
+		color: $palette-pearlWhite;
+	}
+	.section-section_background_image {
+		background: url(../assets/common_dummy_640x480.png) no-repeat;
+		background-size: cover;
+		background-position: center center;
+		color: $palette-pearlWhite;
+		.background_image-filter {
+			background-color: rgba(0,0,0,0.5);
+		}
+	}
+}
