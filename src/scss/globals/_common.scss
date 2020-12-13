@@ -5,11 +5,12 @@
 body {
     font-family: $font;
     background-color: $color-body-bg;
+    
 }
 
 h1,h2,h3,h4,h5,h6 {
     letter-spacing: .07em;
-    font-weight: 400;
+    // font-weight: 400;
     margin-top: 18px;
     margin-bottom: 18px;
 }
@@ -128,6 +129,7 @@ blockquote {
     max-width: 1140px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
     background-color: $color-main-bg;
+    color: $color-main-text;
 }
 .hero:not(.page-index) {
     background-color: $color-hero-bg;
