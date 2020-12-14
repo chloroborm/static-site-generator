@@ -1,5 +1,5 @@
 // buttons
-.button {
+.button, .button-link-arrow {
     display: inline-block;
     text-align: center;
     padding: .6rem 1rem;
@@ -18,4 +18,71 @@
         text-decoration: none;
         border-color: transparent;
     }
+   
+}
+
+
+// .button-link-arrow {
+//     border: 1px solid #00bbf0;
+//     border-radius: 0.25rem;
+//     color: #00bbf0;
+//     display: inline-block;
+//     padding: 0.75rem 2.5rem 0.75rem 1rem;
+//     position: relative;
+//     text-decoration: none;
+//   }
+  
+//   .button-link-arrow::after {
+//     /* 三角形 */
+//     content: "";
+//     border-bottom: 2px solid #00bbf0;
+//     border-right: 2px solid #00bbf0;
+//     display: inline-block;
+//     height: 0.5rem;
+//     width: 0.5rem;
+  
+//     /* 配置 */
+//     position: absolute;
+//     top: 50%;
+//     right: 1rem;
+//     transform: translatey(-50%) rotate(-45deg);
+//   }
+  
+//   .button-link-arrow:hover {
+//     background-color: #00bbf0;
+//     color: #fff;
+//   }
+  
+//   .button-link-arrow:hover::after {
+//     border-color: #fff;
+//   }
+
+.button-link-arrow {
+    color: $color-button;
+    position: relative;
+    padding-right: 2.5rem;
+    &::after {
+        /* 三角形 */
+        content: "";
+        border-bottom: 2px solid $color-button;
+        border-right: 2px solid $color-button;
+        display: inline-block;
+        height: 0.5rem;
+        width: 0.5rem;
+
+        /* 配置 */
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translatey(-50%) rotate(-45deg);
+    }
+    &:hover {
+        background-color:  $color-button;
+        color: $palette-white;
+        &::after {
+            border-color: $palette-white;
+        }
+    }
+    
+    
 }
