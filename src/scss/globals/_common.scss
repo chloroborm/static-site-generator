@@ -17,9 +17,14 @@ h1,h2,h3,h4,h5,h6 {
 img {
     max-width: 100%;
 }
+p, dt, dd, li, figcaption{
+    letter-spacing: .04em;
+}
+table {
+    letter-spacing: .03em;
+}
 p {
     line-height: 1.8;
-    letter-spacing: .04em;
     font-weight:400;
 }
 section {  // セクションデフォルト設定
