@@ -16,4 +16,26 @@ const data = Object.assign(globalData, localData);
 <%- include(data.toRoot + "../partial/_header", {data:data}); %>
 
 
+
+
+
+
+
+<header class="hero">
+	<div class="common-container">
+		<h1>Index</h1>
+	</div>
+</header>
+
+<section class="section-link_to_sample">
+	<div class="common-container">
+		<header class="section-header">
+			<h2>サンプルページへのリンク</h2>
+		</header>
+		<a href="<%= data.toRoot %>sample/">サンプルページ</a>
+	</div>
+</section>
+
+
+
 <%- include(data.toRoot + "../partial/_footer", {data:data}); %>
