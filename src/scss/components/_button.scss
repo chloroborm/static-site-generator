@@ -1,5 +1,6 @@
 // buttons
 .button, .button-link-arrow, .button-large{
+     background-color: $palette-white;
     display: inline-block;
     text-align: center;
     padding: .6rem 1rem;
@@ -8,7 +9,6 @@
     font-size: .85rem;
     overflow: hidden;
     color: $color-button;
-    background-color: transparent;
     text-decoration: none;
     border: 1px solid $color-button;
     transition: all .2s;
@@ -21,6 +21,7 @@
 }
 
 .button-link-arrow {
+    background-color: $palette-white;
     position: relative;
     padding-right: 2.5rem;
     &::after {
