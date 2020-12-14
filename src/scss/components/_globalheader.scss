@@ -12,29 +12,131 @@
     width: 100%;
     z-index: 100;
     height: $globalHeader-height;
+    overflow: hidden;
     .globalHeader-row {
-        display: flex;
+        display:flex;
+         align-items: center;
         justify-content: space-between;
-        text-transform: uppercase;
-        font-size: .8rem;
         a {
-            color: white;
+            color: $color-globalHeader-text;
             display: inline-block;
             padding: 1rem .5rem;
             text-decoration: none;
         }
     }
-    .navbar-ul {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        li {
-            margin: 0;
-            list-style: none;
+    .drawer-hidden {
+        display: none;
+    }
+    .drawer{
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+    }
+    a.globalHeader-brand {
+        display: inline-block;
+    }
+   
+    @media screen and (min-width: 961px) {
+        nav {
+          display: inline-block;
+          box-sizing: border-box;
+            ul {
+                margin: 0px 0px;
+                list-style: none;
+                display: inline-block;
+                li {
+                    display: inline-block;
+                    padding: 0px 6px;
+                    a {
+                        text-decoration: none;
+                        color: $color-globalHeader-text;
+                        padding: 5px 0px;
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+    @media screen and (max-width: 960px) {
+        /*---------------グローバルナビ --------------- */
+        .drawer {
+            position: absolute;
+            right: 10px;
+        }
+        /* ハンバーガーアイコンの設置スペース */
+        .drawer-open {
+            display: flex;
+            height: 60px;
+            width: 60px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 100;/* 重なり順を一番上に */
+            cursor: pointer;
+            span, span::before, span::after {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 25px;
+                border-radius: 3px;
+                background: $color-globalHeader-text;
+                transition: 0.3s;
+                position: absolute;
+            }
+            span::before {
+                bottom: 8px;
+            }
+            span::after {
+                top: 8px;
+            }
+        }
+        
+        /* アイコンがクリックされたら真ん中の線を透明にする */
+        #drawer-check:checked ~ .drawer-open span {
+            background: rgba(255, 255, 255, 0);
+        }
+        
+        /* アイコンがクリックされたらアイコンが×印になるように上下の線を回転 */
+        #drawer-check:checked ~ .drawer-open span::before {
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+        
+        #drawer-check:checked ~ .drawer-open span::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+        #drawer-check:checked ~ .global_nav {
+            right: 0;/* メニューを画面に入れる */
+        }
+        #drawer-check:checked ~ .drawer-open span:before,
+        #drawer-check:checked ~ .drawer-open span:after {
+            background-color: $color-globalHeader-bg;
+        }
+        
+        /* メニューのデザイン*/
+        .global_nav {
+            width: 270px;
+            right: -270px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            /*left: 100%;*//* メニューを画面の外に飛ばす */
+            z-index: 99;
+            background-color: rgba(255,255,255,.85);
+            transition: .3s;
+            ul{
+                list-style: none;
+                a {
+                    width: 100%;
+                    color: $color-globalHeader-bg;
+                }
+            }
         }
     }
 }
-
 .globalHeader-blank {
     height: $globalHeader-height;
 }

@@ -17,29 +17,28 @@
 <body id=<%= data.pageBodyId %>>
 
   <header class="globalHeader">
-    <nav>
-      <div class="common-container">
-        <div class="globalHeader-row">
-          <div class="globalHeader-left">
-            <a class="navbar-brand" href="<%= data.toRoot %>">Sample</a>
-          </div>
-          <div class="globalHeader-right">
-            <ul class="navbar-ul">
+
+    <div class="common-container">
+      <div class="globalHeader-row">
+        <a class="globalHeader-brand" href="<%= data.toRoot %>">Sample</a>
+        <div class="drawer">
+          <input type="checkbox" id="drawer-check" class="drawer-hidden">
+          <label for="drawer-check" class="drawer-open"><span></span></label>
+
+          <nav class="global_nav">
+            <ul>
               <li>
-                <a href="<%= data.toRoot %>about/">
-                  About
-                </a>
+                <a href="<%= data.toRoot %>about/">About</a>
               </li>
               <li>
-                <a href="<%= data.toRoot %>sandbox/">
-                  SandBox
-                </a>
+                <a href="<%= data.toRoot %>sandbox/">SandBox</a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
-    </nav>
+    </div>
+
   </header>
   <div class="globalHeader-blank"></div>
   <div id="main">
