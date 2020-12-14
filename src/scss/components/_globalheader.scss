@@ -2,23 +2,23 @@
 //globalheader
 
 
-.globalHeader {
-	background: $color-globalHeader-bg;
-	color: $color-globalHeader-text;
+.globalheader {
+	background: $color-globalheader-bg;
+	color: $color-globalheader-text;
     position: fixed; /* 要素の位置を固定する */
     top: 0; /* 基準の位置を画面の一番下に指定する */
     left:0;
     right:0;
     width: 100%;
     z-index: 100;
-    height: $globalHeader-height;
+    height: $globalheader-height;
     overflow: hidden;
-    .globalHeader-row {
+    .globalheader-row {
         display:flex;
          align-items: center;
         justify-content: space-between;
         a {
-            color: $color-globalHeader-text;
+            color: $color-globalheader-text;
             display: inline-block;
             padding: 1rem .5rem;
             text-decoration: none;
@@ -32,7 +32,7 @@
         margin: 0px;
         padding: 0px;
     }
-    a.globalHeader-brand {
+    a.globalheader-brand {
         display: inline-block;
     }
    
@@ -49,7 +49,7 @@
                     padding: 0px 6px;
                     a {
                         text-decoration: none;
-                        color: $color-globalHeader-text;
+                        color: $color-globalheader-text;
                         padding: 5px 0px;
                     }
                 }
@@ -81,7 +81,7 @@
                 height: 3px;
                 width: 25px;
                 border-radius: 3px;
-                background: $color-globalHeader-text;
+                background: $color-globalheader-text;
                 transition: 0.3s;
                 position: absolute;
             }
@@ -113,7 +113,7 @@
         }
         #drawer-check:checked ~ .drawer-open span:before,
         #drawer-check:checked ~ .drawer-open span:after {
-            background-color: $color-globalHeader-bg;
+            background-color: $color-globalheader-bg;
         }
         
         /* メニューのデザイン*/
@@ -131,12 +131,12 @@
                 list-style: none;
                 a {
                     width: 100%;
-                    color: $color-globalHeader-bg;
+                    color: $color-globalheader-bg;
                 }
             }
         }
     }
 }
-.globalHeader-blank {
-    height: $globalHeader-height;
+.globalheader-blank {
+    height: $globalheader-height;
 }

@@ -57,10 +57,10 @@ $palette-powderBlue: #b0e0e6;
 $color-body-bg: $palette-pearlWhite;
 $color-main-text: $palette-lampBlack;
 $color-main-bg: $palette-white;
-$color-globalHeader-text: $palette-snowWhite;
-$color-globalHeader-bg: $palette-lampBlack;
-$color-globalFooter-text: $palette-lampBlack;
-$color-globalFooter-bg: transparent;
+$color-globalheader-text: $palette-snowWhite;
+$color-globalheader-bg: $palette-lampBlack;
+$color-globalfooter-text: $palette-lampBlack;
+$color-globalfooter-bg: transparent;
 $color-hero-text: $palette-white;
 $color-hero-bg: $palette-navyBlue;
 $color-section-bg: $palette-white;
@@ -70,7 +70,7 @@ $color-button: $palette-marineBlue;
 $font: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 
 
-$globalHeader-height: 55px;
+$globalheader-height: 55px;
 
 $mq-xs: "(max-width: 480px)";
 $mq-sm: "(min-width: 576px)";
