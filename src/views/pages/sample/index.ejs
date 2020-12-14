@@ -1,0 +1,50 @@
+<%# ページ固有の変数 %>
+<%
+const localData = {
+	pageTitle: "Index",
+	pageBodyId: "page-index",
+	toRoot: "./../" 
+};
+%>
+<%# サイト全体の変数 %>
+<% include(localData.toRoot + "../data/_data"); const globalData = getData(); %>
+<%
+const data = Object.assign(globalData, localData);
+%>
+<% console.log(data); %>
+
+<%- include(data.toRoot + "../partial/_header", {data:data}); %>
+
+
+<header class="hero">
+	<div class="common-container">
+		<p>サンプルサイトです</p>
+		<h1><div class='arrow_box'>Sample!</div></h1>
+		<img src="<%= data.toRoot %>assets/sample/index_top_hero.png">
+	</div>
+</header>
+
+<section class="section-pickup">
+	<div class="common-container">
+		<header class="section-header">
+			<h2>Pick UP</h2>
+		</header>
+		<div class="l-row">
+			<div class="l-span6">
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+			<div class="l-span6">
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<%- include(data.toRoot + "../partial/_footer", {data:data}); %>
