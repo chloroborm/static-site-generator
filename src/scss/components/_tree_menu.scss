@@ -3,10 +3,6 @@ $tree_menu-padding: 0.8em; // 行の高さを基準に余白と位置を揃え�
 $tree_menu-border-width: 1px;
 $tree_menu-border-color: currentColor; // colorと同じ色を指定している
  
-.tree_menu {
-    line-height: $tree_menu-padding;
-}
- 
 .tree_menu,
 .tree_menu ul {
     margin: 0;
@@ -14,45 +10,44 @@ $tree_menu-border-color: currentColor; // colorと同じ色を指定している
     list-style-type: none;
 }
  
-.tree_menu ul {
-    position: relative;
-    margin-top: ($tree_menu-padding / 2);
-    margin-left: $tree_menu-padding;
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        border-left: $tree_menu-border-width solid $tree_menu-border-color;
+
+.tree_menu {
+    line-height: $tree_menu-padding;
+    ul {
+        position: relative;
+        margin-top: ($tree_menu-padding / 2);
+        margin-left: $tree_menu-padding;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            border-left: $tree_menu-border-width solid $tree_menu-border-color;
+        }
+        li {
+            position: relative;
+            margin: 0;
+            padding: ($tree_menu-padding / 2) $tree_menu-padding;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                // top: $tree_menu-padding;
+                top: 1.4em;
+                left: 0;
+                width: ($tree_menu-padding / 2);
+                height: 0;
+                border-top: $tree_menu-border-width solid $tree_menu-border-color;
+            }
+            &:last-child::before {
+                top: $tree_menu-padding;
+                bottom: 0;
+                height: auto;
+                background-color: $color-main-bg; // 背景色に合わせて色変えてください
+            }
+        }
     }
-}
- 
-.tree_menu ul li {
-    position: relative;
-    margin: 0;
-    padding: ($tree_menu-padding / 2) $tree_menu-padding;
-}
- 
-.tree_menu ul li:before {
-    content: "";
-    display: block;
-    position: absolute;
-    // top: $tree_menu-padding;
-    top: 1.4em;
-    left: 0;
-    width: ($tree_menu-padding / 2);
-    height: 0;
-    border-top: $tree_menu-border-width solid $tree_menu-border-color;
-}
- 
-// 1.背景色を適宜変更してください。
-// `inherit`（継承）はされず、`initial`（初期値）はtransparentです。
-.tree_menu ul li:last-child:before {
-    top: $tree_menu-padding;
-    bottom: 0;
-    height: auto;
-    background-color: $color-main-bg; // [1]
 }
