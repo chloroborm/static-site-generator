@@ -1,0 +1,15 @@
+// index page
+#page-index{
+    .hero {
+        margin: 0px;
+        background: $palette-white;
+        text-align: center;
+        color: $palette-lampBlack;
+        overflow:hidden;
+        height: 100vh;
+        height: calc(calc( var(--vh, 1vh) * 100) - #{$globalHeader-height});
+        .common-container {
+            height: 100%;
+        }   
+    }
+}
