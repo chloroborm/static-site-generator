@@ -1,0 +1,156 @@
+<%# ページ固有の変数 %>
+<%
+const localData = {
+	pageTitle: "Sample Page1",
+	pageBodyId: "page-sample_page1",
+	toRoot: "./../../"
+};
+%>
+<%# サイト全体の変数 %>
+<% include(localData.toRoot + "../data/_data"); const globalData = getData(); %>
+<%
+const data = Object.assign(globalData, localData);
+%>
+<% console.log(data); %>
+
+<%- include(data.toRoot + "../partial/_header", {data:data}); %>
+
+
+<header class="hero">
+	<div class="common-container">
+		<h1>Page1</h1>
+	</div>
+</header>
+
+
+
+<section class="section-xxx1">
+	<div class="common-container">
+		<header class="section-header">
+			<h2>XXX</h2>
+		</header>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="l-row">
+			<div class="l-span6">
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/common_dummy_640x480.png">
+					<figcaption>Dummy</figcaption>
+				</figure>
+			</div>
+			<div class="l-span6">
+				<table>
+					<tr>
+						<th>テーブルヘッダ(th) 1</th>
+						<th>テーブルヘッダ 2</th>
+						<th>テーブルヘッダ 3</th>
+					</tr>
+					<tr>
+						<td>セル(td) 1</td>
+						<td>セル 2</td>
+						<td>セル 3</td>
+					</tr>
+					<tr>
+						<td>セル 1</td>
+						<td>セル 2</td>
+						<td>セル 3</td>
+					</tr>
+					<tr>
+						<td>セル 1</td>
+						<td>セル 2</td>
+						<td>セル 3</td>
+					</tr>
+				</table>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<a class="button-link-arrow">XXX</a>	
+			</div>
+		</div>
+		<div class="l-row">
+			<div class="l-span4">
+				<h3>XXX</h3>
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/common_dummy_320x240.png">
+				</figure>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<a class="button-link-arrow">XXX</a>	
+			</div>
+			<div class="l-span4">
+				<h3>XXX</h3>
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/common_dummy_320x240.png">
+				</figure>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<a class="button-link-arrow">XXX</a>
+			</div>
+			<div class="l-span4">
+				<h3>XXX</h3>
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/common_dummy_320x240.png">
+				</figure>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<a class="button-link-arrow">XXX</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-xxx2">
+	<div class="common-container">
+		<header class="section-header">
+			<h2>XXX</h2>
+		</header>
+		<section class="section-xxx2_1">
+			<div class="common-container">
+				<header class="section-header">
+					<h3>XXX</h3>
+				</header>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+					<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+					<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+					<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+				</ul>
+			</div>
+		</section>
+		<section class="section-xxx2_2">
+			<div class="common-container">
+				<header class="section-header">
+					<h3>XXX</h3>
+				</header>
+				<div class="l-row">
+					<div class="l-span6">
+						<h4>XXX</h4>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+							<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+						</ol>	
+					</div>
+					<div class="l-span6">
+						<h4>XXX</h4>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+							<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-xxx2_3">
+			<div class="common-container">
+				<header class="section-header">
+					<h3>XXX</h3>
+				</header>
+				<ol>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+					<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+					<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+					<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+				</ol>
+			</div>
+		</section>
+	</div>
+</section>
+<%- include(data.toRoot + "../partial/_footer", {data:data}); %>

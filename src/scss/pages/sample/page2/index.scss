@@ -1,0 +1,14 @@
+// page2 page
+#page-sample_page2{
+	.section-xxx2 {
+		background: url(../assets/sample/common_dummy_640x480.png) no-repeat;
+		background-size: cover;
+		background-position: center center;
+		color: $palette-pearlWhite;
+		.background_image-filter {
+			background-color: rgba(0,0,0,0.5);
+		}
+	}
+} 
+
+
