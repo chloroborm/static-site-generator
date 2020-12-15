@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 body {
     font-family: $font;
     background-color: $color-body-bg;
-    
+    text-align :center;
+}
+#main p, dt, dd, li{
+    text-align :left;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -13,6 +16,7 @@ h1,h2,h3,h4,h5,h6 {
     // font-weight: 400;
     margin-top: 18px;
     margin-bottom: 18px;
+   
 }
 img {
     max-width: 100%;
@@ -27,14 +31,37 @@ p {
     line-height: 1.8;
     font-weight:400;
 }
-section {  // セクションデフォルト設定
+$section-topbottompadding: 25px;
+#main section { 
+    
     background-color: $palette-white;
-    margin: 0px 0px;
+    padding: $section-topbottompadding 0px;
     overflow:hidden;
+    .background_image-filter {
+        margin-block-start: -$section-topbottompadding;
+        margin-block-end: -$section-topbottompadding;
+    }
+    .section-header {
+        padding: 10px 0px;
+        p {
+            text-align: center;
+            letter-spacing: .1em;
+        }
+        .section-header-badge {
+            border-top: 1px solid $color-main-text;
+            border-bottom: 1px solid $color-main-text;
+            color: $color-main-text;
+            padding: .2em .5em .2em .7em;
+            letter-spacing: .2em;
+            display: inline-block;
+            font-size: .8rem;
+            margin-top: 10px;
+        }
+    }
 }
 
 figure {
-    margin: 0 0 2rem;
+    margin: 1rem 0 1rem;
     text-align: center;
     figcaption {
         text-align:center;
@@ -158,6 +185,9 @@ blockquote {
     max-width: 1200px;
     @media (max-width: 1240px) {
         margin: 0 20px;
+    }
+    @media (max-width: 576px) {
+        margin: 0 10px;
     }
     .common-container {
         margin: 0 20px;
