@@ -31,7 +31,7 @@ p {
     line-height: 1.8;
     font-weight:400;
 }
-$section-topbottompadding: 25px;
+$section-topbottompadding: 20px;
 #main section { 
     
     background-color: $palette-white;
@@ -40,6 +40,8 @@ $section-topbottompadding: 25px;
     .background_image-filter {
         margin-block-start: -$section-topbottompadding;
         margin-block-end: -$section-topbottompadding;
+        padding-block-start: $section-topbottompadding;
+        padding-block-end: $section-topbottompadding;
     }
     .section-header {
         padding: 10px 0px;
