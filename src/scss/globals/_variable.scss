@@ -55,7 +55,7 @@ $palette-powderBlue: #b0e0e6;
 
 //コンポーネントのカラー定義
 $color-body-bg: $palette-pearlWhite;
-$color-main-text: $palette-lampBlack;
+$color-main-text: $palette-charcoalGray;
 $color-main-bg: $palette-white;
 $color-globalheader-text: $palette-snowWhite;
 $color-globalheader-bg: $palette-lampBlack;
@@ -64,7 +64,7 @@ $color-globalfooter-bg: transparent;
 $color-hero-text: $palette-white;
 $color-hero-bg: $palette-charcoalGray;
 $color-section-bg: $palette-white;
-$color-button: $palette-marineBlue;
+$color-button: $color-main-text;
 
 // font-family
 $font: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
