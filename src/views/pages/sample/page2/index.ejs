@@ -17,8 +17,12 @@ const data = Object.assign(globalData, localData);
 
 
 <header class="hero">
-	<div class="common-container">
-		<h1>Page2</h1>
+	<img src="<%= data.toRoot %>assets/sample/common_dummy_640x480.png">
+	<div class="background_image-filter">
+		<div class="common-container">
+			<h1>Page2</h1>
+			<p>Lorem ipsum</p>
+		</div>
 	</div>
 </header>
 
@@ -31,6 +35,10 @@ const data = Object.assign(globalData, localData);
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</header>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<blockquote>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+			<cite>Lorem ipsum</cite>
+		</blockquote>
 	</div>
 </section>
 
@@ -39,6 +47,7 @@ const data = Object.assign(globalData, localData);
 		<div class="common-container">
 			<header class="section-header">
 				<h2>XXX</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</header>
 			<div class="l-row">
 				<div class="l-span6">
@@ -73,20 +82,20 @@ $ npm start</pre>
 			</div>
 			<div class="l-span4">
 				<ul class="tree_menu">
-					<li>fafaf
+					<li>Lorem
 						<ul>
-							<li>aaa
+							<li>Lorem ipsum
 								<ul>
-									<li>aaa</li>
-									<li>aaa</li>
-									<li>aaa</li>
+									<li>Lorem ipsum dolor</li>
+									<li>Lorem ipsum</li>
+									<li>Lorem</li>
 								</ul>
 							</li>
-							<li>aaa<ul>
-									<li>aaa</li>
+							<li>Lorem ipsum dolor<ul>
+									<li>Lorem</li>
 								</ul>
 							</li>
-							<li>aaa</li>
+							<li>Lorem</li>
 						</ul>
 					</li>
 				</ul>
@@ -96,5 +105,33 @@ $ npm start</pre>
 	</div>
 </section>
 
+<section class="section-xxx4">
+	<div class="background_image-filter">
+		<div class="common-container">
+			<header class="section-header">
+				<h2>XXX</h2>
+			</header>
+			<div class="l-row">
+				<div class="l-span6">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<details>
+						<summary>Lorem ipsum</summary>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</details>
+					<details>
+						<summary>Lorem ipsum</summary>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</details>
+				</div>
+				<div class="l-span6">
+					<figure>
+						<img src="<%= data.toRoot %>assets/sample/common_dummy_640x480.png">
+						<figcaption>Dummy</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <%- include(data.toRoot + "../partial/_footer", {data:data}); %>
