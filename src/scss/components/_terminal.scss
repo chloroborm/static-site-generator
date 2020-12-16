@@ -1,12 +1,15 @@
 // terminal
-.terminal pre {
-    font-family: Menlo,Consolas,Monaco;
-    background-color: $palette-charcoalGray;
-    color: $palette-pearlWhite;
-    padding: 1rem;
-    font-size: 0.9rem;
-    line-height: 1.3;
-    text-align: left;
-    word-break: break-word;
-    overflow: auto;
+.terminal{
+    margin: 10px 3px;
+    pre {
+        font-family: Menlo,Consolas,Monaco;
+        background-color: $palette-charcoalGray;
+        color: $palette-pearlWhite;
+        padding: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.3;
+        text-align: left;
+        word-break: break-word;
+        overflow: auto;
+    }
 }
