@@ -3,6 +3,19 @@
 	.hero {
 		position: relative;
 		max-height: calc(calc( var(--vh, 1vh) * 100) - #{$globalheader-height});
+		.hero-image-container {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+		}
+		.hero-background_image-filter {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
 		.common-container {
 			position: absolute;
 			top: 50%;
@@ -14,16 +27,8 @@
 			padding:0;
 		}
 		img {
-			// width: 100%;
 			max-height: calc(calc( var(--vh, 1vh) * 100) - #{$globalheader-height});
-		}
-		.background_image-filter {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0,0,0,0.5);
+			vertical-align:bottom; /*改行コードが文字として認識されてしまいフォントサイズの幅を持つバグへの対処*/
 		}
 	}
 	.section-xxx2 {
