@@ -1,0 +1,20 @@
+<%# ページ固有の変数 %>
+<%
+const localData = {
+	pageTitle: "Sample Page3",
+	pageBodyId: "page-sample_page3",
+	toRoot: "./../../"
+};
+%>
+<%# サイト全体の変数 %>
+<% include(localData.toRoot + "../data/_data"); const globalData = getData(); %>
+<%
+const data = Object.assign(globalData, localData);
+%>
+<% console.log(data); %>
+
+<%- include(data.toRoot + "../partial/_header", {data:data}); %>
+
+
+
+<%- include(data.toRoot + "../partial/_footer", {data:data}); %>
