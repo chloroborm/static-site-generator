@@ -17,12 +17,12 @@
 			background-color: rgba(0, 0, 0, 0.5);
 		}
 		.common-container {
+			min-width: 300px;
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			-ms-transform: translate(-50%,-50%);
-			-webkit-transform: translate(-50%,-50%);
-			transform: translate(-50%,-50%);
+			transform: translateY(-50%) translateX(-50%);
+			-webkit-transform: translateY(-50%) translateX(-50%);
 			margin:0;
 			padding:0;
 		}
