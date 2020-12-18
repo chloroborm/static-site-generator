@@ -31,4 +31,23 @@
 			vertical-align:bottom; /*改行コードが文字として認識されてしまいフォントサイズの幅を持つバグへの対処*/
 		}
 	}
+
+	.section-award {
+		background: url(../assets/sample/page3/giorgio-trovato-_XTY6lD8jgM-unsplash.jpg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+		color: $palette-pearlWhite;
+		.background_image-filter {
+			background-color: rgba(0,0,0,0.7);
+		}
+	}
+	.section-special_feature {
+		background: url(../assets/sample/page3/illustration-2246804_1920.jpg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+		color: $palette-pearlWhite;
+		.background_image-filter {
+			background-color: rgba(0,0,0,0.7);
+		}
+	}
 }

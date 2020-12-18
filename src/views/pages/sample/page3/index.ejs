@@ -22,16 +22,16 @@ const data = Object.assign(globalData, localData);
 	</div>
 	<div class="common-container">
 		<h1>Chlorobo Game Fes 2020</h1>
-		<p>コロナ渦を逆手に取る同人ゲームフェス開幕。（架空サイトです）</p>
+		<p>コロナ渦でも同人ゲームフェス開幕。（架空サイトです）</p>
 		<a class="button-link-arrow">投稿する</a>
-		<a class="button-link-arrow">プレイする</a>
+		<a class="button-link-arrow">作品一覧をみる</a>
 	</div>
 </header>
 
 <section class="section-introduction">
 	<div class="common-container">
 		<header class="section-header">
-			<h3>自粛せずに創作しよう</h3>
+			<h3>創作は自粛せずに。</h3>
 		</header>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 		<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -42,19 +42,21 @@ const data = Object.assign(globalData, localData);
 	<div class="common-container">
 		<header class="section-header">
 			<h3>特徴</h3>
-			<p>いろいろ変わってます。</p>
 		</header>
 		<div class="l-row">
 			<div class="l-span4">
+				<span class="material-icons">attach_money</span>
 				<h4>優勝賞金5万円</h4>
 				<p>最優秀作品には優勝賞金5万円を差し上げます。Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 				</p>
 			</div>
 			<div class="l-span4">
+				<span class="material-icons">supervisor_account</span>
 				<h4>例年多数の作品＆レビュー</h4>
 				<p>毎年多数のクリエイター、プレイヤーが参加してくれています。昨年は100を超える作品と1500のレビューで大盛況でした！</p>
 			</div>
 			<div class="l-span4">
+				<span class="material-icons">home</span>
 				<h4>テーマは「家」</h4>
 				<p>時代背景を踏まえ今年のテーマは「家」。家からアイデアを広げ様々な作品を作りましょう！</p>
 			</div>
@@ -63,55 +65,100 @@ const data = Object.assign(globalData, localData);
 </section>
 
 <section class="section-award">
-	<div class="common-container">
-		<header class="section-header">
-			<h3>表彰</h3>
-		</header>
-		<div class="l-row">
-			<div class="l-span4">
-				<h4>最優秀賞</h4>
-				<p>すべての作品の中から1作品を選出します。</p>
-			</div>
-			<div class="l-span4">
-				<h4>優秀賞</h4>
-				<p>最優秀賞受賞の作品以外の中から3作品を選出します。</p>
-			</div>
-			<div class="l-span4">
-				<h4>特別賞</h4>
-				<p>最優秀賞・優秀賞受賞の作品以外の中から光るものがある数作品を選出します。</p>
+	<div class="background_image-filter">
+		<div class="common-container">
+			<header class="section-header">
+				<h3>表彰</h3>
+			</header>
+			<div class="l-row">
+				<div class="l-span4">
+					<span class="material-icons">emoji_events</span>
+					<h4>最優秀賞</h4>
+					<ul>
+						<li>すべての作品の中から1作品を選出</li>
+						<li>賞金5万円</li>
+					</ul>
+				</div>
+				<div class="l-span4">
+					<span class="material-icons">military_tech</span>
+					<h4>優秀賞</h4>
+					<ul>
+						<li>最優秀賞受賞の作品以外の中から3作品を選出</li>
+						<li>賞金1万円</li>
+					</ul>
+				</div>
+				<div class="l-span4">
+					<span class="material-icons">military_tech</span>
+					<h4>特別賞</h4>
+					<ul>
+						<li>最優秀賞・優秀賞受賞の作品以外の中から光るものがある数作品を選出</li>
+						<li>賞金5千円</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
 
-<section class="section-award">
+<section class="section-past_works">
 	<div class="common-container">
 		<header class="section-header">
-			<h3>現在の作品一覧</h3>
+			<h3>過去の作品一覧</h3>
 		</header>
-		<a class="button-link-arrow">作品一覧をみる</a>
+		<div class="l-row">
+			<div class="l-span4">
+				<h4>2017年度優勝作品</h4>
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/page3/yoga-5508336_640.png">
+				</figure>
+				<h5>Yoga Fighter</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<a class="button-link-arrow">詳細をみる</a>
+			</div>
+			<div class="l-span4">
+				<h4>2018年度優勝作品</h4>
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/page3/among-us-5592050_640.png">
+				</figure>
+				<h5>宇宙ひとりっ子</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<a class="button-link-arrow">詳細をみる</a>
+			</div>
+			<div class="l-span4">
+				<h4>2019年度優勝作品</h4>
+				<figure>
+					<img src="<%= data.toRoot %>assets/sample/page3/superhero-534120_640.jpg">
+				</figure>
+				<h5>Girlish Groove</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<a class="button-link-arrow">詳細をみる</a>
+			</div>
+		</div>
+		<a class="button-link-arrow">過去の作品一覧をみる</a>
 	</div>
 </section>
 
 
 <section class="section-special_feature">
-	<div class="common-container">
-		<header class="section-header">
-			<h3>特集</h3>
-			<div class="l-row">
-				<div class="l-span6">
-					<h4>昨年の優勝者十五夜レギュラーさんインタビュー</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a class="button-link-arrow">詳細をみる</a>
+	<div class="background_image-filter">
+		<div class="common-container">
+			<header class="section-header">
+				<h3>特集</h3>
+				<div class="l-row">
+					<div class="l-span6">
+						<h4>昨年の優勝者十五夜レギュラーさんインタビュー</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<a class="button-link-arrow">詳細をみる</a>
+					</div>
+					<div class="l-span6">
+						<h4>GameFes2020開幕に向けての運営奮闘記</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<a class="button-link-arrow">詳細をみる</a>
+					</div>
 				</div>
-				<div class="l-span6">
-					<h4>GameFes2020開幕に向けての運営奮闘記</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a class="button-link-arrow">詳細をみる</a>
-				</div>
-			</div>
-		</header>
+			</header>
+		</div>
 	</div>
 </section>
 
@@ -119,6 +166,7 @@ const data = Object.assign(globalData, localData);
 	<div class="common-container">
 		<header class="section-header">
 			<h3>スケジュール</h3>
+			<p>運営を円滑にするためにも期限の遵守をお願いいたします。</p>
 		</header>
 		<table>
 			<tr>
@@ -158,6 +206,7 @@ const data = Object.assign(globalData, localData);
 	<div class="common-container">
 		<header class="section-header">
 			<h3>ルール</h3>
+			<p>下記のルールを満たさない作品は公開することができません。あらかじめご了承ください。</p>
 		</header>
 		<ul>
 			<li>「家」をテーマにした作品であること</li>
@@ -188,7 +237,7 @@ const data = Object.assign(globalData, localData);
 			</div>
 			<div class="l-span6">
 				<h4>プレイヤーの方</h4>
-				<a class="button-link-arrow">プレイする</a>
+				<a class="button-link-arrow">作品一覧をみる</a>
 			</div>
 		</div>
 	</div>
